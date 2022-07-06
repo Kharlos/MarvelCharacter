@@ -10,7 +10,7 @@ class MarvelCharacterApiDataSource(private val marvelApi: MarvelApi) : RemoteDat
         val ts = marvelApi.getTimeStamp()
         val hash = marvelApi.getHash(ts)
 
-        return marvelApi.service.listPublicCharacters(20, 0, apiKey, ts, hash)
+        return marvelApi.service.listPublicCharacters(50, 0, apiKey, ts, hash)
             .data?.results?.map {
                 it.toDomain()
             } ?: ArrayList()
