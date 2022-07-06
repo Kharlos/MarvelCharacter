@@ -16,6 +16,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
+import java.lang.Exception
 
 @RunWith(MockitoJUnitRunner::class)
 class CharacterListViewModelTest{
@@ -54,6 +55,16 @@ class CharacterListViewModelTest{
             viewModel.model.observeForever(observer)
             viewModel.getPublicCharacters()
             verify(observer).onChanged(CharacterListViewModel.UiModel.Content(characters))
+        }
+    }
+
+    @Test
+    fun `verify and error is throw`() {
+        runTest{
+
+            viewModel.model.observeForever(observer)
+
+            verify(observer).onChanged(CharacterListViewModel.UiModel.Error)
         }
     }
 

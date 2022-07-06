@@ -24,13 +24,12 @@
             tools:listitem="@layout/item_character" />
 
         <TextView
-
             android:id="@+id/tvError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/generic_error"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"

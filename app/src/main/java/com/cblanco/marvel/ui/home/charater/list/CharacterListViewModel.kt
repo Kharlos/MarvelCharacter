@@ -31,15 +31,13 @@ class CharacterListViewModel(
     }
 
     fun getPublicCharacters() {
-        launch {
+        launch() {
             _model.value = UiModel.Loading
 
             getPublicCharactersUseCase.invoke()
                 .onEach {
                     this@CharacterListViewModel.currentCharacterList = it
                     _model.value = UiModel.Content(currentCharacterList)
-                }
-                .onCompletion {
                 }
                 .catch {
                     _model.value = UiModel.Error

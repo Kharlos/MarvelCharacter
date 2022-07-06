@@ -85,8 +85,9 @@ class CharacterListFragment : Fragment(), AndroidScopeComponent {
 
     private fun handlerError() {
         binding?.let {
-            it.rvCharacter?.gone()
-            it.tvError?.visible()
+            it.laLoader.gone()
+            it.rvCharacter.gone()
+            it.tvError.visible()
             it.tvError.text = getString(R.string.generic_error)
         }
     }
