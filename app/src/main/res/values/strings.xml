@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Marvel Characters App</string>
+
+    <string name="short_app_Name">Marvel Characters</string>
+    <string name="api_key">89d3b8c22610ef8d81ebf0c48c354a8e</string>
+    <string name="api_private_key">83d24740d75bb724018eb33a2246f4186ac97e47</string>
+    <string name="generic_error">Ups, we sorry the server is not available, please try later</string>
+    <string name="no_description_avaliable">No description avaliable</string>
+</resources>

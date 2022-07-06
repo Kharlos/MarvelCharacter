@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/characterListFragment">
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.cblanco.marvel.ui.home.charater.list.CharacterListFragment"
+        android:label="Marvel Characters"
+        tools:layout="@layout/fragment_character_list" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment"
+            app:enterAnim="@anim/transition_in_right"
+            app:exitAnim="@anim/transition_out_left"
+            app:popEnterAnim="@anim/transition_in_left"
+            app:popExitAnim="@anim/transition_out_right"
+            app:popUpTo="@id/characterListFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.cblanco.marvel.ui.home.charater.detail.CharacterDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_character_detail" >
+        <argument
+            android:name="characterId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>
