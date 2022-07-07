@@ -59,7 +59,7 @@ class CharacterListViewModelTest{
     }
 
     @Test
-    fun `verify and error is throw`() {
+    fun `verify an error is throw`() {
         runTest{
 
             viewModel.model.observeForever(observer)
